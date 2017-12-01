@@ -66,6 +66,13 @@ public class Dom4j {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+            if(input != null){
+                try {
+                    input.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             if (inputStream != null) {
                 try {
                     inputStream.close();
